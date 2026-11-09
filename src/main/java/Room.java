@@ -1,9 +1,9 @@
 public class Room {
     private int numberOfBeds;
     private double price;
-    private boolean occupied;
+    private boolean occupied; //match variable to getter
     private boolean dirty;
-    private boolean available;
+    private boolean available;//should not be attribute
 
     public int getNumberOfBeds() {
         return numberOfBeds;
@@ -22,6 +22,15 @@ public class Room {
     }
 
     public boolean isAvailable() {
-        return available;
+        return available; //return !isOccupied && !isDirty
     }
+
+/*    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
+        this.numberOfBeds = numberOfBeds;
+        this.price = price;
+        this.occupied = false;
+        this.dirty = false;
+
+        what constructor should be
+    } */
 }
