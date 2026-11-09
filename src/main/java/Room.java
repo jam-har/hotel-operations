@@ -1,9 +1,9 @@
 public class Room {
-    int numberOfBeds;
-    double price;
-    boolean occupied;
-    boolean dirty;
-    boolean available;
+    private int numberOfBeds;
+    private double price;
+    private boolean occupied;
+    private boolean dirty;
+    private boolean available;
 
     public int getNumberOfBeds() {
         return numberOfBeds;
