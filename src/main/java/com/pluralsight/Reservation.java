@@ -1,3 +1,5 @@
+package com.pluralsight;
+
 public class Reservation {
     private String roomType;
     private double price;//not a separate variable, derived getter

@@ -1,3 +1,5 @@
+package com.pluralsight;
+
 public class Room {
     private int numberOfBeds;
     private double price;
