@@ -5,6 +5,13 @@ public class Room {
     private boolean dirty;
     private boolean available;//should not be attribute
 
+    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
+        this.numberOfBeds = numberOfBeds;
+        this.price = price;
+        this.occupied = false;
+        this.dirty = false;
+    }
+
     public int getNumberOfBeds() {
         return numberOfBeds;
     }
@@ -22,15 +29,20 @@ public class Room {
     }
 
     public boolean isAvailable() {
-        return available; //return !isOccupied && !isDirty
+        return !occupied && !dirty;
     }
 
-/*    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
-        this.numberOfBeds = numberOfBeds;
-        this.price = price;
-        this.occupied = false;
-        this.dirty = false;
+    public void checkIn() {
+        occupied = true;
+        dirty = true;
+    }
 
-        what constructor should be
-    } */
+    public void cleanRoom() {
+        dirty = false;
+    }
+
+    public void checkOut() {
+        cleanRoom();
+        occupied = false;
+    }
 }
