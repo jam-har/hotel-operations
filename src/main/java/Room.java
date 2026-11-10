@@ -3,7 +3,6 @@ public class Room {
     private double price;
     private boolean occupied; //match variable to getter
     private boolean dirty;
-    private boolean available;//should not be attribute
 
     public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
         this.numberOfBeds = numberOfBeds;
