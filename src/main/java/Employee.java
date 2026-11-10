@@ -4,6 +4,9 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
+    //start time as attribute here
+
+    //constructor needed
 
     public double getTotalPay() {
         //return (payRate * hoursWorked); //consider overtime pay (if, else-if)
@@ -32,7 +35,10 @@ public class Employee {
 
     public double punchOut(double time){
         double dayHoursWorked = time - start;
-        hoursWorked = hoursWorked + dayHoursWorked;
+        hoursWorked = hoursWorked + dayHoursWorked; //hoursWorked += dayHoursWorked
         return hoursWorked;
     }
+
+    //bonus: use if condition for start time == 0 (this means no previous start punch), if not use punch out calculation
+    // time input would be end time
 }
