@@ -31,7 +31,8 @@ public class Employee {
     }
 
     public double punchOut(double time){
-        hoursWorked = time - start;
+        double dayHoursWorked = time - start;
+        hoursWorked = hoursWorked + dayHoursWorked;
         return hoursWorked;
     }
 }
